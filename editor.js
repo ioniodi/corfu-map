@@ -8,7 +8,7 @@ function init() {
   // Initialise the map.
   map = new google.maps.Map(document.getElementById('map-holder'), {
     center: {lat: 39.624107, lng: 19.922318},
-    zoom: 12,
+    zoom: 14,
     mapTypeControl: false,
     streetViewControl: false,
     fullscreenControl: false,
