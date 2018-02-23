@@ -52,7 +52,7 @@ function bindDataLayerListeners(dataLayer) {
   dataLayer.addListener('setgeometry', refreshGeoJsonFromData);
 }
 //remove linestring
-function removeline(){
+function removeLine(){
      	    map.data.remove(Linestring);
 	
 }
