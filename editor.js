@@ -51,7 +51,8 @@ function bindDataLayerListeners(dataLayer) {
   dataLayer.addListener('removefeature', refreshGeoJsonFromData);
   dataLayer.addListener('setgeometry', refreshGeoJsonFromData);
 }
-//removepolyline
-function removeLine() {
-        flightPath.setMap(null);
-      }
+//remove linestring
+function removeline(){
+     	    map.data.remove(Linestring);
+	
+}
