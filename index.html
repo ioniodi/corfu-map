@@ -7,6 +7,14 @@
     <link href="styles.css" title="compact" rel="stylesheet" type="text/css">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-CmjQQcI71kuW7qyZLCLTzOT1xl9jd20"></script>
     <script src="editor.js"></script>
+    <script>
+    function myFunction() {
+    var para = document.createElement("P");
+    var t = document.createTextNode("This is a paragraph.");
+    para.appendChild(t);
+    document.body.appendChild(para);
+}
+</script>
   </head>
   <body>
     <textarea id="geojson-output" placeholder="See edits in GeoJson."></textarea>
