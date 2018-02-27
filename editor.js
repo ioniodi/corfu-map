@@ -28,7 +28,6 @@ function init() {
   var mapContainer = document.getElementById('map-holder');
   geoJsonOutput = document.getElementById('geojson-output');
   downloadLink = document.getElementById('download-link');
-  var btn = document.createElement("BUTTON");
 }
 
 google.maps.event.addDomListener(window, 'load', init);
