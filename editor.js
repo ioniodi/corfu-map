@@ -80,7 +80,7 @@ function showButton() {
 
 
 //delete specific element
-/*
+
 google.maps.event.addListener(map, 'click', function(event) {
   mouseLocation = event.latLng;
   delElement();
@@ -90,11 +90,11 @@ function seDel(){
 }
 function delElement(){
   map.data.forEach(function(feature) {
-    if(mouseLocation==  map.data.feature.latLng && deleteFlag==1)
+    if(mouseLocation==  map.data.feature.latLng )
         map.data.remove(feature);
-        delFlag=0;
+        
         });
-}*/
+}
 
 google.maps.event.addDomListener(window, 'load', init);
 
