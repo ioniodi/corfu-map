@@ -63,7 +63,7 @@ function ShowGeoJson(){
   }
 }
 
-function deletepaths(){
+function DeletePaths(){
   map.data.forEach(function(e){map.data.remove(e);});
   geoJsonOutput.value=null;
 }
