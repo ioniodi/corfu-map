@@ -20,21 +20,18 @@ body {
 }
 
 #geojson-output {
-
-width: 250px;
--webkit-box-sizing: border-box; /* <=iOS4, <= Android  2.3 */
--moz-box-sizing: border-box; /* FF1+ */
-box-sizing: border-box; /* Chrome, IE8, Opera, Safari 5.1*/
-height: 25%;
-top: 50px;
-right: 10px;
-position: absolute; 
-  
-box-sizing: border-box; 
-border: none;
-resize: none;
-background-color: #F1F1F1;
-display: none;
+  width: 40px;
+  height: 50%;
+  top: 50px;
+  right: 10px;
+  position: absolute;
+  -webkit-box-sizing: border-box; /* <=iOS4, <= Android  2.3 */
+  -moz-box-sizing: border-box; /* FF1+ */
+  box-sizing: border-box; /* Chrome, IE8, Opera, Safari 5.1*/
+  border: none;
+  resize: none;
+  background-color: #F1F1F1;
+  display: none;
   
 }
 
