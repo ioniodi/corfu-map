@@ -28,7 +28,9 @@ body {
   border: none;
   resize: none;
   background-color: #F1F1F1;
-  display: none;   /*add button to show or not!!!!!*/
+  /*display: none;   /*add button to show or not!!!!!*/
+  display: flex;
+    flex-direction: row-reverse;
 }
 #download-link {
   position: absolute;
