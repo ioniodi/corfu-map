@@ -22,8 +22,8 @@ body {
 #geojson-output {
   width: 400px;
   height: 50%;
-  top: 50px;
-  right: 10px;
+  top: 60px;
+  right: 200px;
   position: absolute;
   -webkit-box-sizing: border-box; /* <=iOS4, <= Android  2.3 */
   -moz-box-sizing: border-box; /* FF1+ */
@@ -39,7 +39,7 @@ body {
 background-color: #479362;
 position: absolute;
 top:10px;
-right:120px;
+right:180px;
 z-index:100;
 }
 
@@ -47,7 +47,7 @@ z-index:100;
   background-color: #479362;
   position: absolute;
   top:10px;
-  right:320px;
+  right:420px;
   z-index:100;
 }
 #Delete-Paths {
