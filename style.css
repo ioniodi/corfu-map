@@ -1,0 +1,75 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial", "Helvetica", sans-serif;
+  color: #222;
+  font-size: 13px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  overflow-y: auto;
+}
+
+/* Map styles. */
+#map-holder {
+  height: 100%;
+  width: 100%;
+}
+
+#geojson-output {
+
+width: 250px;
+-webkit-box-sizing: border-box; /* <=iOS4, <= Android  2.3 */
+-moz-box-sizing: border-box; /* FF1+ */
+box-sizing: border-box; /* Chrome, IE8, Opera, Safari 5.1*/
+height: 25%;
+top: 50px;
+right: 10px;
+position: absolute; 
+  
+box-sizing: border-box; 
+border: none;
+resize: none;
+background-color: #F1F1F1;
+display: none;
+  
+}
+
+#download{
+background-color: #479362;
+position: absolute;
+top:10px;
+right:120px;
+z-index:100;
+}
+
+#Show-GeoJSon {
+  background-color: #479362;
+  position: absolute;
+  top:10px;
+  right:320px;
+  z-index:100;
+}
+#Delete-Paths {
+  background-color: #BC0322;
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  z-index:100;  
+}
+
+.style-button{
+    border: none;
+    color: #f3efef;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 19px;
+    
+}
+
+
