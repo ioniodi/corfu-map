@@ -8,14 +8,12 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-CmjQQcI71kuW7qyZLCLTzOT1xl9jd20"></script>
     <script src="editor.js"></script>
   </head>
-  <body>
-   <textarea id="geojson-output" placeholder="See edits in GeoJson."></textarea>
-	<div id="map-holder"></div>
-	
+  <body>	
     <div id="map-holder"></div>
+    <textarea id="geojson-output" placeholder="See edits in GeoJson."></textarea>
     <button class="style-button" onclick="ShowGeoJson()" id="Show-GeoJSon" >Show GeoJson </button>
-	<button class="style-button" onclick="DeletePaths()" id="Delete-Paths" >Delete Paths </button>
-	<a href="data:;base64," download="geojson.json"><button id="download-link"  class="style-button">Download GeoJson</button></a>
+    <button class="style-button" onclick="DeletePaths()" id="Delete-Paths" >Delete Paths </button>
+    <a href="data:;base64," download="geojson.json"><button id="download-link"  class="style-button">Download GeoJson</button></a>
    </body>
  </html>
 
