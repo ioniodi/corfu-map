@@ -20,7 +20,7 @@ body {
 }
 
 #geojson-output {
-  width: 40px;
+  width: 400px;
   height: 50%;
   top: 50px;
   right: 10px;
@@ -35,19 +35,20 @@ body {
   
 }
 
+#download-link{
+background-color: #479362;
+position: absolute;
+top:10px;
+right:120px;
+z-index:100;
+}
+
 #Show-GeoJSon {
   background-color: #479362;
   position: absolute;
   top:10px;
-  right:420px;
+  right:320px;
   z-index:100;
-}
-#Delete-Paths {
-  background-color: #BC0322;
-  position: absolute;
-  top: 10px;
-  right: 0px;
-  z-index:100;  
 }
 #Delete-Paths {
   background-color: #BC0322;
