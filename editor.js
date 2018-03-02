@@ -7,14 +7,16 @@ var downloadLink;
 function init() {
   // Initialise the map.
   map = new google.maps.Map(document.getElementById('map-holder'), {
-    center: {lat: 0, lng: 0},
-    zoom: 3,
+    center: {lat: 39.6200000, lng: 19.920000},
+    zoom: 16,
     mapTypeControl: false,
     streetViewControl: false,
     fullscreenControl: false,
     mapTypeId: 'satellite'
   });
-	
+
+  map.data.loadGeoJson('data/test.geojson');
+  
   map.data.setControls(['Point', 'LineString', 'Polygon']);
   map.data.setStyle({
     editable: true,
@@ -50,4 +52,18 @@ function bindDataLayerListeners(dataLayer) {
   dataLayer.addListener('addfeature', refreshGeoJsonFromData);
   dataLayer.addListener('removefeature', refreshGeoJsonFromData);
   dataLayer.addListener('setgeometry', refreshGeoJsonFromData);
+}
+
+function ShowGeoJson(){
+  var output = document.getElementById("geojson-output");
+  if (output.style.display === "block"){
+    output.style.display = "none";
+  } else {
+   output.style.display = "block";
+  }
+}
+
+function DeletePaths(){
+  map.data.forEach(function(e){map.data.remove(e);});
+  geoJsonOutput.value=null;
 }

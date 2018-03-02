@@ -20,7 +20,11 @@ body {
 }
 
 #geojson-output {
-  width: 100%;
+  width: 400px;
+  height: 50%;
+  top: 60px;
+  right: 200px;
+  position: absolute;
   -webkit-box-sizing: border-box; /* <=iOS4, <= Android  2.3 */
   -moz-box-sizing: border-box; /* FF1+ */
   box-sizing: border-box; /* Chrome, IE8, Opera, Safari 5.1*/
@@ -28,10 +32,41 @@ body {
   resize: none;
   background-color: #F1F1F1;
   display: none;
+  
 }
-#download-link {
+
+#download-link{
+background-color: #479362;
+position: absolute;
+top:10px;
+right:180px;
+z-index:100;
+}
+
+#Show-GeoJSon {
+  background-color: #479362;
   position: absolute;
   top:10px;
-  right:10px;
+  right:420px;
   z-index:100;
 }
+#Delete-Paths {
+  background-color: #BC0322;
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  z-index:100;  
+}
+
+.style-button{
+    border: none;
+    color: #f3efef;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 19px;
+    
+}
+
+
