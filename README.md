@@ -3,7 +3,8 @@
 -show,download Geojson,delete paths
 -xartografhsh 
 
--link:https://p14doit.github.io/corfu-map/
 
+λινκ στο εκτελέσιμο:https://p14doit.github.io/corfu-map/
+λινκ στο αποθετήριο του κώδικα:https://github.com/p14doit/corfu-map
 
 
