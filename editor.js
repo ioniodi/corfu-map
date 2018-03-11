@@ -20,6 +20,20 @@ function init() {
     editable: true,
     draggable: true,
     clickable: true
+	  
+   map.data.setStyle(function(feature) {
+        var color = "#eee";
+        if (feature.getProperty("Rating") == null && feature.getProperty("Color") == null ) {
+            feature.setProperty("Rating", value);
+            feature.setProperty("Color", value);
+        }
+        if (feature.getProperty("Color") != value) {
+            var color = feature.getProperty("Color");
+        }
+        return ({
+            strokeColor: color,
+            strokeWeight: 4
+   });
   });
 
   bindDataLayerListeners(map.data);
