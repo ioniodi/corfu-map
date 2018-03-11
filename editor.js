@@ -39,7 +39,7 @@ function init() {
     refreshGeoJsonFromData();
   });
   /*right click removes feature*/
-  map.data.addListener('rightclick',function(event){
+  map.data.addListener('dblclick',function(event){
     map.data.remove(event.feature);
   });
 
