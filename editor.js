@@ -42,7 +42,7 @@ map.data.loadGeoJson("data/2016187_review.json");
         map.data.feature.setStyle({strokeColor:setcolor});
 
         });
-}
+
 /*click event triggers color change depending what we chose*/
   map.data.addListener('click', function(event) {
     event.feature.setProperty("color",Color);
