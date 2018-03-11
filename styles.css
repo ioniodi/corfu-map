@@ -1,4 +1,4 @@
-html, body {
+html, body { 
   height: 100%;
   width: 100%;
   margin: 0;
@@ -10,13 +10,104 @@ body {
   color: #222;
   font-size: 13px;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
-  overflow-y: auto;
+  overflow-y: hidden;
+}
+
+/* default */
+.defaultClass {
+  font-size: 17px;
+  color: #000000;
+  border: none;
+  background-color: #f2f2f2;
+}
+
+.redR {
+  color: white;
+  border: none;
+  background-color: red;
+}
+
+.yellowR {
+  color: black;
+  border: none;
+  background-color: yellow;
+}
+
+.whiteR {
+  color: black;
+  border: none;
+  background-color: white;
+}
+
+.blueR {
+  color: white;
+  border: none;
+  background-color: blue;
+}
+
+.greenR {
+  color: black;
+  border: none;
+  background-color: green;
 }
 
 /* Map styles. */
 #map-holder {
   height: 100%;
   width: 100%;
+}
+#map-container {
+  width: 75%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  float: right;
+  z-index: 0;
+}
+
+#data-container {
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+/*   background-color: rgba(0, 0, 0, 0.5); */
+  background-color: transparent;
+}
+
+#data-container.visible {
+  display: block;
+}
+
+#data-display {
+  color: white;
+  border: white dashed 8px;
+  height: calc(100% - 56px);
+  width: calc(100% - 56px);
+  background-repeat: no-repeat;
+  background-position: center; 
+  margin: 20px;
+}
+
+#dataBox {
+  float: left;
+  width: 25%;
+  height: 100%;
+/*   box-shadow: 0 4px 16px rgba(0,0,0,0.2); */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  outline: 1px solid rgba(0,0,0,0.2);
+  z-index: 100;
+  background-color: transparent;
+}
+
+#dataBox-title {
+  font-size: 20px;
+  border-left: 6px solid #580000; 
+  line-height: 24px;
+  color:#181818;
 }
 
 #geojson-output {
@@ -26,12 +117,38 @@ body {
   box-sizing: border-box; /* Chrome, IE8, Opera, Safari 5.1*/
   border: none;
   resize: none;
-  background-color: #F1F1F1;
-  display: none;
+  background-color:#F1F1F1 ;
+  display: block;
 }
-#download-link {
-  position: absolute;
-  top:10px;
-  right:10px;
-  z-index:100;
+
+#geojson-output {
+  background-color:#c1c1c1;
+}
+
+#geojson-output.invalid {
+  background-color: #FAC6C0;
+}
+
+#download-link{
+  background-color: transparent;
+}
+
+#controls{
+/*   padding: 8px; */
+/*   border-left: 6px solid #181818; */
+/*   font-size: 20px; */
+  border-bottom: 4px solid #808080;
+  border:none;
+  background-color: #1a1a1a;
+}  
+
+#drawing-controls{
+  border:none;
+  background-color: #1a1a1a;
+}
+
+#rating-controls{
+  padding: 3px;
+  border:none;
+  background-color: #1a1a1a;
 }
