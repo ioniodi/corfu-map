@@ -39,7 +39,7 @@ map.data.loadGeoJson("data/2016187_review.json");
   map.data.forEach(function(feature) {
     
         var setcolor= map.data.feature.getProperty("color");
-        map.data.feature.setStyle({strokeColor:setcolor});
+        map.data.feature.setStyle(feature,{strokeColor:setcolor});
 
         });
 
