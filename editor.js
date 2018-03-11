@@ -31,7 +31,18 @@ function init() {
     strokeColor: '#000000',
     strokeWeight: 3
   });
+  
+  /*load json*/
 map.data.loadGeoJson("data/2016187_review.json");
+  /*add colors*/
+  
+  map.data.forEach(function(feature) {
+    
+        var setcolor= map.data.feature.getProperty("color");
+        map.data.feature.setStyle({strokeColor:setcolor});
+
+        });
+}
 /*click event triggers color change depending what we chose*/
   map.data.addListener('click', function(event) {
     event.feature.setProperty("color",Color);
