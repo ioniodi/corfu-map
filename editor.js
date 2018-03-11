@@ -37,8 +37,10 @@ map.data.loadGeoJson("data/2016187_review.json");
   /*add colors*/
    map.data.forEach(function(feature) {
       map.data.setStyle(function(feature) {
-        ({
-            strokeColor: feature.getProperty('color'),
+          var setcolor = feature.getProperty("color");
+
+        return({
+            strokeColor: setcolor
             
           });
       })
