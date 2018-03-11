@@ -28,7 +28,7 @@ function init() {
   });
   bindDataLayerListeners(map.data);
   map.data.setStyle({
-    strokeColor: '#FFFFFF',
+    strokeColor: '#000000',
     strokeWeight: 3
   });
 
