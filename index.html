@@ -5,45 +5,12 @@
     <meta charset="utf-8">
     <title>Corfu Map Editor</title>
     <link href="styles.css" title="compact" rel="stylesheet" type="text/css">
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-CmjQQcI71kuW7qyZLCLTzOT1xl9jd20&libraries=drawing"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-CmjQQcI71kuW7qyZLCLTzOT1xl9jd20"></script>
     <script src="editor.js"></script>
   </head>
   <body>
-	<div id="dataBox">
-		<div id="dataBox-title">Corfu Map Editor</div>
-		
-		<div id="controls">
-			<button onclick="document.getElementById('geojson-output').select();" class="defaultClass">
-				Select All</button>
-			<button onclick="showButton();"class="defaultClass"> Show/Hide Geojson </button>
-			<a id="download-link" href="data:;base64," download="geojson.json">
-			<button class="defaultClass"> Download Geojson </button>
-			</a>
-		</div>	
-		
-		<div id="drawing-controls">
-			<button onclick="Clear();"class="defaultClass"> Clear the Map </button>
-			<button onclick="DeleteSel();"class="defaultClass"> Delete the selected </button>
-		</div>
-		
-		<div id="rating-controls">
-			<button onclick="Rating1();" class="redR"> Πολύ κακό </button>
-			<button onclick="Rating2();" class="yellowR"> Κακό </button>
-			<button onclick="Rating3();" class="whiteR"> Μέτριο </button>
-			<button onclick="Rating4();" class="blueR"> Καλό </button>
-			<button onclick="Rating5();" class="greenR"> Πολύ καλό </button>			
-		</div>	
-		
-		<textarea id="geojson-output"
-			  placeholder="Drag and drop GeoJSON onto the map or paste it here to begin editing."></textarea>
-	</div>
-	
-	<div id="map-container">
-		<div id="map-holder"></div>
-		<div id="data-container">
-			<div id="data-display"></div>
-		</div>
-	</div>
+    <textarea id="geojson-output" placeholder="See edits in GeoJson."></textarea>
+	<div id="map-holder"></div>
+	<a id="download-link" href="data:;base64," download="geojson.json"><button>Download GeoJson</button></a>
   </body>
 </html>
