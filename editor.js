@@ -35,7 +35,7 @@ function init() {
   /*load json*/
 map.data.loadGeoJson("data/2016187_review.json");
   /*add colors*/
-   map.data.forEach(function(feature) {
+   
       map.data.setStyle(function(feature) {
           var setcolor = feature.getProperty("color");
 
@@ -44,7 +44,7 @@ map.data.loadGeoJson("data/2016187_review.json");
             
           });
       })
-   })
+  
 /*click event triggers color change depending what we chose*/
   map.data.addListener('click', function(event) {
     event.feature.setProperty("color",Color);
