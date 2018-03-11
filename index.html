@@ -6,20 +6,22 @@
 
     <title>Corfu Map Editor</title>
     <link href="styles.css" title="compact" rel="stylesheet" type="text/css">
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-CmjQQcI71kuW7qyZLCLTzOT1xl9jd20"></script>
+
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-CmjQQcI71kuW7qyZLCLTzOT1xl9jd20"></script>
+
     <script src="editor.js"></script>
   </head>
 
-  <body>
+  <body oncontextmenu="return false">
     <div id="panel">
       <div id="panel-content">
         <div id="panel-title">Corfu Map Editor</div>
+
         <div id="geojson-controls">
-          <button onclick="document.getElementById('geojson-input').select();" class="btn-default">Select All</button>
-          <button onclick="Clear();"class="btn-default">Clear Map</button>
+          <button title="Remove single feature by rightclicking" onclick="Clear();"class="btn-default">Clear Map</button>
           <a id="download-link" href="data:;base64," download="geojson.json"><button class="btn-default">Download  Geojson</button></a>
           <button onclick="showButton();"class="btn-default">Show/Hide Geojson</button>
+            <button onclick="colorLines();"class="btn-default">color lines</button>
         </div>
 
         <textarea id="geojson-input"
@@ -27,12 +29,46 @@
       </div>
     </div>
 
-    <div id="map-container">
-      <div id="map-holder"></div>
+    <div  id="map-container">
+      <div onmouseup="HideMenu('contextMenu');"
+
+          oncontextmenu="ShowMenu('contextMenu',event);"id="map-holder"></div>
 
       <div id="drop-container">
         <div id="drop-silhouette"></div>
       </div>
     </div>
+    <div style="display:none; "   id="contextMenu">
+        <table  border="0" cellpadding="0" cellspacing="0"
+
+            style="border: thin solid #808080; cursor: default;" width="50px"
+
+            bgcolor="White">
+            <tr>
+                <td >
+                    <div onclick="ChangeColor(5); " class="btn-default">Excellent</div>
+                </td>
+            </tr>
+            <tr>
+                <td >
+                  <div onclick="ChangeColor(4);"  class="btn-default">Great</div>
+                </td>
+            </tr>
+            <tr>
+                <td >
+                      <div onclick="ChangeColor(3);"  class="btn-default">Good</div>
+                </td>
+            </tr>
+            <tr>
+                <td >
+                      <div onclick="ChangeColor(2);"  class="btn-default">Okay</div>
+                </td>
+            </tr>
+            <tr>
+                <td >
+                      <div onclick="ChangeColor(1);"  class="btn-default">Bad</div>
+                </td>
+            </tr>
+        </table>
   </body>
 </html>

@@ -12,6 +12,34 @@ body {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   overflow-y: hidden;
 }
+
+
+      .ContextItem    <!-Context Menu Item Style-->
+        {
+            background-color:White;
+            color:Black;
+            font-weight:normal;
+                        }
+     .ContextItem:hover   <!-Context Menu Item Style On Mouse Over-->
+       {
+            background-color:#0066FF;
+            color:White;
+            font-weight:bold;
+
+        }
+       .detailItem
+       {
+           background:transparant;
+
+       }
+       .detailItem:hover
+       {
+           background-color:#FEE378;
+           border: 1px outset #222222;
+           font-weight:bold;
+           cursor:default;
+       }
+
 .btn-default {
   color: #42DCA3;
   border: 1px solid #42DCA3;
