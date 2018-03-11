@@ -35,13 +35,12 @@ function init() {
   /*load json*/
 map.data.loadGeoJson("data/2016187_review.json");
   /*add colors*/
+      map.data.setStyle(function(feature) {
+        ({
+            strokeColor: feature.getProperty('color'),
+            
+          });
   
-  map.data.forEach(function(feature) {
-    
-        var setcolor= map.data.feature.getProperty("color");
-        map.data.feature.setStyle(feature,{strokeColor:setcolor});
-
-        });
 
 /*click event triggers color change depending what we chose*/
   map.data.addListener('click', function(event) {
