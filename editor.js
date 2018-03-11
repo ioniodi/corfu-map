@@ -42,7 +42,7 @@ map.data.loadGeoJson("data/2016187_review.json");
             
           });
       })
-   }
+   })
 /*click event triggers color change depending what we chose*/
   map.data.addListener('click', function(event) {
     event.feature.setProperty("color",Color);
