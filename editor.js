@@ -1,20 +1,20 @@
 // The Google Map.
 var map;
-
 var geoJsonOutput;
 var downloadLink;
 
 function init() {
   // Initialise the map.
   map = new google.maps.Map(document.getElementById('map-holder'), {
-    center: {lat: 0, lng: 0},
-    zoom: 3,
-    mapTypeControl: false,
-    streetViewControl: false,
+    center: {lat: 39.622500, lng: 19.918077},
+    zoom: 15,
+    mapTypeControl: true,
+    streetViewControl: true,
     fullscreenControl: false,
     mapTypeId: 'satellite'
   });
 	
+  map.data.loadGeoJson("data/2016149_review.geojson");
   map.data.setControls(['Point', 'LineString', 'Polygon']);
   map.data.setStyle({
     editable: true,
