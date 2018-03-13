@@ -1,5 +1,6 @@
 // The Google Map.
 var map;
+var value = "unknown";
 
 var geoJsonOutput;
 var downloadLink;
