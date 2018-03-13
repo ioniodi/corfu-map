@@ -28,8 +28,7 @@ body {
   border: none;
   resize: none;
   background-color: #F1F1F1;
-  /*display: none;   /*add button to show or not!!!!!*/
-  display: inline;
+  display: none;   /*add button to show or not!!!!!*/
 }
 #download-link {
   position: absolute;
