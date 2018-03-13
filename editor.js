@@ -21,8 +21,8 @@ function init() {
     editable: true,
     draggable: true,
     clickable: true
-	  
-   map.data.setStyle(function(feature) {
+  });
+  map.data.setStyle(function(feature) {
         var color = "#eee";
         if (feature.getProperty("Rating") == null && feature.getProperty("Color") == null ) {
             feature.setProperty("Rating", value);
@@ -34,8 +34,8 @@ function init() {
         return ({
             strokeColor: color,
             strokeWeight: 4
+	});
    });
-  });
 
   bindDataLayerListeners(map.data);
 
