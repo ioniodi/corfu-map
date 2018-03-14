@@ -105,33 +105,6 @@ function eraseThemAll() {
         }
     });
 }
-function erasePath(event) {
-    bootbox.confirm({
-        message: "Delete this path?",
-        buttons: {
-            confirm: {
-                label: 'Yes',
-                className: 'btn-success'
-            },
-            cancel: {
-                label: 'No',
-                className: 'btn-danger'
-            }
-        },
-        callback: function (result) {
-            if (result == true) {
-                map.data.remove(event.feature);
-            }
-        }
-    });
-}
-function setColor(event, value) {
-    color = value;
-    map.data.overrideStyle(event.feature, {
-        strokeColor: value
-    });
-    event.feature.setProperty("Color", value);
-}
 function scaleOfPath (event) {
     bootbox.prompt({
         title: "Path rating",
@@ -192,4 +165,32 @@ function scaleOfPath (event) {
         }
     });
 }
+function erasePath(event) {
+    bootbox.confirm({
+        message: "Delete this path?",
+        buttons: {
+            confirm: {
+                label: 'Yes',
+                className: 'btn-success'
+            },
+            cancel: {
+                label: 'No',
+                className: 'btn-danger'
+            }
+        },
+        callback: function (result) {
+            if (result == true) {
+                map.data.remove(event.feature);
+            }
+        }
+    });
+}
+function setColor(event, value) {
+    color = value;
+    map.data.overrideStyle(event.feature, {
+        strokeColor: value
+    });
+    event.feature.setProperty("Color", value);
+}
+
 
