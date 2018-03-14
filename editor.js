@@ -1,6 +1,6 @@
 // The Google Map.
 var map;
-
+var value="nothing";
 var geoJsonOutput;
 var downloadLink;
 
@@ -111,30 +111,30 @@ function rPath (event) {
         backdrop: true,
         inputOptions: [
             {
-                text: 'Very bad',
+                text: "Very bad",
                 value: '1',
             },
             {
-                text: 'Bad',
+                text: "Bad",
                 value: '2',
             },
             {
-                text: 'Ok',
+                text: "Ok",
                 value: '3',
             },
             {
-                text: 'Good',
+                text: "Good",
                 value: '4',
             },
             {
-                text: 'Very good',
+                text: "Very good",
                 value: '5',
             }
         ],
         callback: function (result) {
             if (result != null) {
 
-                var rating = "unknown";
+                var rating = "nothing";
 
                 if (result == 1) {
                     rating = 1;
