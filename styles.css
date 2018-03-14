@@ -1,0 +1,87 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial", "Helvetica", sans-serif;
+  color: #222;
+  font-size: 13px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  overflow-y: auto;
+}
+
+/* Map styles. */
+#map-holder {
+  height: 100%;
+  width: 100%;
+}
+
+#geojson-output {
+  width: 350px;
+  height: 25%;
+  top: 50px;
+  right: 10px;
+  position: absolute;
+  -webkit-box-sizing: border-box; /* <=iOS4, <= Android  2.3 */
+  -moz-box-sizing: border-box; /* FF1+ */
+  box-sizing: border-box; /* Chrome, IE8, Opera, Safari 5.1*/
+  border: none;
+  resize: none;
+  background-color: #F1F1F1;
+  display: none;
+  
+}
+
+#download-link {
+  background-color: #0F6BF0;
+  position: absolute;
+  top:10px;
+  right:150px;
+  z-index:100;
+}
+#output-toggle {
+  background-color: #0F6BF0;
+  position: absolute;
+  top:10px;
+  right:10px;
+  z-index:100;
+}
+#removeAllLines {
+  background-color: #BD2E1F;
+  position: absolute;
+  top: 10px;
+  right: 320px;
+  z-index:100; 
+}
+
+.style-button{
+    border-radius: 50px 15px;
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    opacity: 0.8;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.style-button:hover {
+  opacity: 1;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.style-textarea{
+  border-radius: 50px 15px;
+  opacity: 0.4;
+}
+.style-textarea:hover {
+  opacity: 1;
+  border-radius: 0px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
