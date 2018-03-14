@@ -84,7 +84,28 @@ function bindDataLayerListeners(dataLayer) {
   dataLayer.addListener('setproperty', refreshGeoJsonFromData);
 }
 
-
+function delAllPaths() {
+    bootbox.confirm({
+        message: "Delete all the paths?",
+        buttons: {
+            confirm: {
+                label: 'Yes',
+                className: 'btn-success'
+            },
+            cancel: {
+                label: 'No',
+                className: 'btn-danger'
+            }
+        },
+        callback: function (result) {
+            if (result == true) {
+                map.data.forEach(function(feature) {
+                    map.data.remove(feature);
+                });
+            }
+        }
+    });
+}
 function ratePath (event) {
     bootbox.prompt({
         title: "Path rating",
@@ -152,28 +173,7 @@ function setColor(event, value) {
     });
     event.feature.setProperty("Color", value);
 }
-function delAllPaths() {
-    bootbox.confirm({
-        message: "Delete all the paths?",
-        buttons: {
-            confirm: {
-                label: 'Yes',
-                className: 'btn-success'
-            },
-            cancel: {
-                label: 'No',
-                className: 'btn-danger'
-            }
-        },
-        callback: function (result) {
-            if (result == true) {
-                map.data.forEach(function(feature) {
-                    map.data.remove(feature);
-                });
-            }
-        }
-    });
-}
+
 function delPath(event) {
     bootbox.confirm({
         message: "Delete this path?",
