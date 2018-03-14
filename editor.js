@@ -41,9 +41,9 @@ map.data.setStyle(function(feature) {
   //load rating
   map.data.loadGeoJson("data/2016035.geojson");
   //rate path with click
-  map.data.addListener('click',function (event){ rPath(event)});
+  map.data.addListener('click',function (event){ ratePath(event)});
   //delete path with right click
-  map.data.addListener('rightclick',function (event){dPath(event)});
+  map.data.addListener('rightclick',function (event){delPath(event)});
   map.data.addListener('mouseover',function (event){map.data.overrideStyle(event.feature,{strokeWeight:5});});
   map.data.addListener('mouseout',function (event){map.data.overrideStyle(event.feature,{strokeWeight:3});});
   // Retrieve HTML elements.
