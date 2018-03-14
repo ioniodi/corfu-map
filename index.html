@@ -11,17 +11,17 @@
   <body>
 	<div id="map-holder"></div>
 	<div id = "Window">		
-		<a id="download-link" href="data:;base64," download="geojson.json"><button>Download Data</button></a>
+		<a id="download-link" href="data:;base64," download="geojson.json"><button class = "Default">Download Data</button></a>
 		<button onclick = "showButton();" class = "Default">Hide/Show</button> 
 		<button onclick = "DeleteEverythingMwromo();" class = "Default">Delete</button>
 		<textarea id="geojson-output" placeholder="See edits in GeoJson."></textarea>
 		
 		<div id ="RatingControl"> 
-			  <button onclick = "Ratings(1);">Worst</button> 
-			  <button onclick = "Ratings(2);">Bad</button>
-			  <button onclick = "Ratings(3);">Normal</button>
-			  <button onclick = "Ratings(4);">Good</button>
-			  <button onclick = "Ratings(5);">Excellent</button>
+			  <button onclick = "Ratings(1);" class = "Rating1">Worst</button> 
+			  <button onclick = "Ratings(2);" class = "Rating2">Bad</button>
+			  <button onclick = "Ratings(3);" class = "Rating3">Normal</button>
+			  <button onclick = "Ratings(4);" class = "Rating4">Good</button>
+			  <button onclick = "Ratings(5);" class = "Rating5">Excellent</button>
 		</div>
 	</div>
   </body>

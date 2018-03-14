@@ -1,6 +1,6 @@
 // The Google Map.
 var map;
-var value = "unknown";
+var PropertyValue = "unknown";
 var Window;
 var geoJsonOutput;
 var downloadLink;
@@ -17,7 +17,7 @@ function init() {
     mapTypeId: 'satellite'
   });
 	
-  map.data.loadGeoJson("data/2016016.geojson");
+  map.data.loadGeoJson("data/2016016_review.geojson");
 
   map.data.setControls(['Point', 'LineString', 'Polygon']);
   map.data.setStyle({
@@ -33,10 +33,10 @@ function init() {
   map.data.setStyle(function(feature) {
         var color = "white";
         if (feature.getProperty("Rating") == null && feature.getProperty("Color") == null ) {
-            feature.setProperty("Rating", value);
-            feature.setProperty("Color", value);
+            feature.setProperty("Rating", PropertyValue);
+            feature.setProperty("Color", PropertyValue);
         }
-        if (feature.getProperty("Color") != value) {
+        if (feature.getProperty("Color") != PropertyValue) {
             var color = feature.getProperty("Color");
         }
         return ({
@@ -55,13 +55,13 @@ function init() {
   bindDataLayerListeners(map.data);
 
 // Retrieve HTML elements.
-  // Window = document.getElementById('Window');
+  Window = document.getElementById('Window');
   var mapContainer = document.getElementById('map-holder');
   geoJsonOutput = document.getElementById('geojson-output');
   downloadLink = document.getElementById('download-link');
 
-  // resizeGeoJsonInput();
-  // google.maps.event.addDomListener(window, 'resize', resizeGeoJsonInput);
+  resizeGeoJsonInput();
+  google.maps.event.addDomListener(window, 'resize', resizeGeoJsonInput);
 }
 
 google.maps.event.addDomListener(window, 'load', init);
@@ -84,6 +84,7 @@ function bindDataLayerListeners(dataLayer) {
   dataLayer.addListener('addfeature', refreshGeoJsonFromData);
   dataLayer.addListener('removefeature', refreshGeoJsonFromData);
   dataLayer.addListener('setgeometry', refreshGeoJsonFromData);
+  dataLayer.addListener('setproperty', refreshGeoJsonFromData);
 }
 
 //function that shows or hides the geojson output on the screen
@@ -95,11 +96,11 @@ function showButton() {
               document.getElementById('geojson-output').style.display = "none";
 }
 
-// function resizeGeoJsonInput() {
-//   var geoJsonOutputRect = geoJsonOutput.getBoundingClientRect();
-//   var WindowRect = Window.getBoundingClientRect();
-//   geoJsonOutput.style.height = WindowRect.bottom - geoJsonOutputRect.top - 8 + "px";
-// }
+function resizeGeoJsonInput() {
+  var geoJsonOutputRect = geoJsonOutput.getBoundingClientRect();
+  var WindowRect = Window.getBoundingClientRect();
+  geoJsonOutput.style.height = WindowRect.bottom - geoJsonOutputRect.top - 8 + "px";
+}
 
 function DeleteEverythingMwromo(){
 	map.data.forEach(function(feature) {
@@ -109,6 +110,7 @@ function DeleteEverythingMwromo(){
 
 function Ratings(int) {
 	var color;
+	var rating = int;
 	switch(int){
 		case 1:
 			color = 'red';
@@ -126,7 +128,6 @@ function Ratings(int) {
 			color = 'green';
 			break;	
 	}
-
+	fornow.setProperty("Rating", rating);
 	fornow.setProperty("Color", color);
-	fornow.setProperty("Rating",int);
 }

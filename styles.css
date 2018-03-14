@@ -57,3 +57,23 @@ body {
   top: 920px;
   z-index: 200;
 }
+
+.Rating1 {
+  border: 2px solid red;
+}
+
+.Rating2 {
+  border: 2px solid yellow;
+}
+
+.Rating3 {
+  border: 2px solid white;
+}
+
+.Rating4 {
+  border: 2px solid blue;
+}
+
+.Rating5 {
+  border: 2px solid green;
+}
