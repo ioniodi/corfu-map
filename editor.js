@@ -1,6 +1,6 @@
 // The Google Map.
 var map;
-var value="unknown";
+var scale="unknown";
 var geoJsonOutput;
 var downloadLink;
 
@@ -23,7 +23,7 @@ function init() {
   });
 
 map.data.setStyle(function(feature) {
-	var color = "#d3d3d3";
+	var color = "#f5f5f5";
         if (feature.getProperty("Rating") == null && feature.getProperty("Color") == null ) {
             feature.setProperty("Rating", value);
             feature.setProperty("Color", value);
@@ -33,19 +33,20 @@ map.data.setStyle(function(feature) {
         }
         return ({
             strokeColor: color,
-            strokeWeight: 3
+            strokeWeight:4 
         });
 
     });
   bindDataLayerListeners(map.data);
   //load rating
   map.data.loadGeoJson("data/2016096_review.geojson");
+  map.data.addListener('mouseover',function (event){map.data.overrideStyle(event.feature,{strokeWeight:5});});
+  map.data.addListener('mouseout',function (event){map.data.overrideStyle(event.feature,{strokeWeight:3});});
   //rate path with click
   map.data.addListener('click',function (event){ rPath(event)});
   //delete path with right click
   map.data.addListener('rightclick',function (event){dPath(event)});
-  map.data.addListener('mouseover',function (event){map.data.overrideStyle(event.feature,{strokeWeight:5});});
-  map.data.addListener('mouseout',function (event){map.data.overrideStyle(event.feature,{strokeWeight:3});});
+  
   // Retrieve HTML elements.
   var mapContainer = document.getElementById('map-holder');
   geoJsonOutput = document.getElementById('geojson-output');
@@ -69,10 +70,10 @@ function refreshDownloadLinkFromGeoJson() {
 
 // Apply listeners to refresh the GeoJson display on a given data layer.
 function bindDataLayerListeners(dataLayer) {
+  dataLayer.addListener('setproperty', refreshGeoJsonFromData);
   dataLayer.addListener('addfeature', refreshGeoJsonFromData);
   dataLayer.addListener('removefeature', refreshGeoJsonFromData);
   dataLayer.addListener('setgeometry', refreshGeoJsonFromData);
-  dataLayer.addListener('setproperty', refreshGeoJsonFromData);
 }
 function geojsonOutput(){
   var a=document.getElementById("geojson-output");
@@ -82,7 +83,7 @@ function geojsonOutput(){
       a.style.display="none";
   }
 }
-function dAPaths() {
+function eraseThemAll() {
     bootbox.confirm({
         message: "Delete all the paths?",
         buttons: {
@@ -104,67 +105,7 @@ function dAPaths() {
         }
     });
 }
-function rPath (event) {
-    bootbox.prompt({
-        title: "Path rating",
-        inputType: 'checkbox',
-        backdrop: true,
-        inputOptions: [
-            {
-                text: '1',
-                value: '1',
-            },
-            {
-                text: '2',
-                value: '2',
-            },
-            {
-                text: '3',
-                value: '3',
-            },
-            {
-                text: '4',
-                value: '4',
-            },
-            {
-                text: '5',
-                value: '5',
-            }
-        ],
-        callback: function (result) {
-            if (result != null) {
-
-                var rating = "unknown";
-
-                if (result == 1) {
-                    rating = 1;
-                    setColor(event, '#FF0000');
-                }
-                else if (result == 2) {
-                    rating = 2;
-                    setColor(event, '#EE7600');
-                }
-                else if (result == 3) {
-                    rating = 3;
-                    setColor(event, '#FFFF00');
-                }
-                else if (result == 4) {
-                    rating = 4;
-                    setColor(event, '#00FF00');
-                }
-                else if (result == 5) {
-                    rating = 5;
-                    setColor(event, '#0000FF');
-                }
-                else {
-                    bootbox.alert("Please, select one rating!");
-                }
-                event.feature.setProperty('Rating', rating);
-            }
-        }
-    });
-}
-function dPath(event) {
+function erasePath(event) {
     bootbox.confirm({
         message: "Delete this path?",
         buttons: {
@@ -191,3 +132,64 @@ function setColor(event, value) {
     });
     event.feature.setProperty("Color", value);
 }
+function scaleOfPath (event) {
+    bootbox.prompt({
+        title: "Path rating",
+        inputType: 'checkbox',
+        backdrop: true,
+        inputOptions: [
+            {
+                text: '1',
+                scale: '1',
+            },
+            {
+                text: '2',
+                scale: '2',
+            },
+            {
+                text: '3',
+                scale: '3',
+            },
+            {
+                text: '4',
+                scale: '4',
+            },
+            {
+                text: '5',
+                scale: '5',
+            }
+        ],
+        callback: function (result) {
+            if (result != null) {
+
+                var rating = "unknown";
+
+                if (result == 1) {
+                    rating = 1;
+                    setColor(event, '#190000');
+                }
+                else if (result == 2) {
+                    rating = 2;
+                    setColor(event, '#660000');
+                }
+                else if (result == 3) {
+                    rating = 3;
+                    setColor(event, '#990000');
+                }
+                else if (result == 4) {
+                    rating = 4;
+                    setColor(event, '#CC0000');
+                }
+                else if (result == 5) {
+                    rating = 5;
+                    setColor(event, '#FF0000');
+                }
+                else {
+                    bootbox.alert("Please, select one rating!");
+                }
+                event.feature.setProperty('Rating', rating);
+            }
+        }
+    });
+}
+
