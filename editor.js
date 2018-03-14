@@ -25,10 +25,10 @@ function init() {
 map.data.setStyle(function(feature) {
 	var color = "#A8A8A8";
         if (feature.getProperty("Rating") == null && feature.getProperty("Color") == null ) {
-            feature.setProperty("Rating", value);
-            feature.setProperty("Color", value);
+            feature.setProperty("Rating", ratevalue);
+            feature.setProperty("Color", ratevalue);
         }
-        if (feature.getProperty("Color") != value) {
+        if (feature.getProperty("Color") != ratevalue) {
             var color = feature.getProperty("Color");
         }
         return ({
@@ -84,7 +84,7 @@ function bindDataLayerListeners(dataLayer) {
   dataLayer.addListener('setproperty', refreshGeoJsonFromData);
 }
 
-function dAPaths() {
+function delAllPaths() {
     bootbox.confirm({
         message: "Delete all the paths?",
         buttons: {
@@ -106,7 +106,7 @@ function dAPaths() {
         }
     });
 }
-function rPath (event) {
+function ratePath (event) {
     bootbox.prompt({
         title: "Path rating",
         inputType: 'checkbox',
