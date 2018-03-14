@@ -16,22 +16,64 @@ body {
 /* Map styles. */
 #map-holder {
   height: 100%;
-  width: 100%;
+  width: 80%;
+  float:right;
 }
 
 #geojson-output {
+  position: relative;
   width: 100%;
+  height: 93.9%;
   -webkit-box-sizing: border-box; /* <=iOS4, <= Android  2.3 */
   -moz-box-sizing: border-box; /* FF1+ */
   box-sizing: border-box; /* Chrome, IE8, Opera, Safari 5.1*/
   border: none;
   resize: none;
   background-color: #F1F1F1;
-  display: none;
+  display: block;
 }
 #download-link {
-  position: absolute;
-  top:10px;
-  right:10px;
+  position: relative;
+  /*top:10px;*/
+  /*right:10px;*/
   z-index:100;
+}
+
+#Window {
+  float: left;
+  width: 20%;
+  height: 100%;
+  background-color: 'white';
+}
+
+.Default {
+  position: relative;
+  border: 2px solid black;
+  z-index: 100; 
+}
+
+#RatingControl {
+  position: absolute;
+  top: 920px;
+  z-index: 200;
+}
+
+.Rating1 {
+  border: 2px solid red;
+}
+
+.Rating2 {
+  border: 2px solid yellow;
+}
+
+.Rating3 {
+  border: 2px solid white;
+}
+
+.Rating4 {
+  border: 2px solid blue;
+}
+
+.Rating5 {
+  border: 2px solid green;
 }
