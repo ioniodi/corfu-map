@@ -57,7 +57,7 @@ google.maps.event.addDomListener(window, 'load', init);
 // Refresh different components from other components.
 function refreshGeoJsonFromData() {
   map.data.toGeoJson(function(geoJson) {
-    geoJsonOutput.value = JSON.stringify(geoJson, null, "\t");
+    geoJsonOutput.value = JSON.stringify(geoJson);
     refreshDownloadLinkFromGeoJson();
   });
 }
