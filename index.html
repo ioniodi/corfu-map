@@ -9,8 +9,14 @@
     <script src="editor.js"></script>
   </head>
   <body>
-    <textarea id="geojson-output" placeholder="See edits in GeoJson."></textarea>
-	<div id="map-holder"></div>
-	<a id="download-link" href="data:;base64," download="geojson.json"><button>Download GeoJson</button></a>
+            <div id="map-holder"></div>
+        <textarea class="z-depth-1 form-control" id="geojson-output" placeholder="See edits in GeoJson."></textarea>
+        <button onclick="geojsonOutput()" id="output-toggle" class="btn btn-warning">GeoJson output</button>
+    	<a id="download-link" href="data:;base64," download="geojson.json"><button class="btn btn-primary">Download GeoJson</button></a>
+        <button onclick="dAPaths()" id="removeAllLines" class="btn btn-danger">Delete all paths</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
   </body>
 </html>
