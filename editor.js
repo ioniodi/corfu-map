@@ -104,7 +104,7 @@ function dAPaths() {
         }
     });
 }
-function ratePath (event) {
+function rPath (event) {
     bootbox.prompt({
         title: "Path rating",
         inputType: 'checkbox',
@@ -161,13 +161,10 @@ function ratePath (event) {
                 }
                 event.feature.setProperty('Rating', rating);
             }
-            else {
-
-            }
         }
     });
 }
-function deletePath(event) {
+function dPath(event) {
     bootbox.confirm({
         message: "Delete this path?",
         buttons: {
