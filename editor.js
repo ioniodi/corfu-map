@@ -39,7 +39,7 @@ map.data.setStyle(function(feature) {
     });
   bindDataLayerListeners(map.data);
   //load rating
-  map.data.loadGeoJson("data/2016096_review.geojson");
+  map.data.loadGeoJson("data/2016096.geojson");
   //rate path with click
   map.data.addListener('click',function (event){ rPath(event)});
   //delete path with right click
