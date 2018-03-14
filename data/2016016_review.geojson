@@ -409,8 +409,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 4,
+        "Color": "blue"
       }
     },
     {
