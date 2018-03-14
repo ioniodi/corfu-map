@@ -13,12 +13,11 @@ body {
   overflow-y: auto;
 }
 
-/* Map styles. */ 
+/* Map styles. */
 #map-holder {
   height: 100%;
   width: 100%;
 }
-
 
 #geojson-output {
   width: 100%;
@@ -28,7 +27,7 @@ body {
   border: none;
   resize: none;
   background-color: #F1F1F1;
-  display: none;   /*add button to show or not!!!!!*/
+  display: none;
 }
 #download-link {
   position: absolute;
