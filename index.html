@@ -7,16 +7,14 @@
     <link href="styles.css" title="compact" rel="stylesheet" type="text/css">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-CmjQQcI71kuW7qyZLCLTzOT1xl9jd20"></script>
     <script src="editor.js"></script>
-    <script>
-    function myFunction() {
-    var btn = document.createElement("BUTTON");
-    document.body.appendChild(btn);
-    }
-    </script>
   </head>
   <body>
-    <textarea id="geojson-output" placeholder="See edits in GeoJson."></textarea>
 	<div id="map-holder"></div>
-	<a id="download-link" href="data:;base64," download="geojson.json"><button>Download GeoJson</button></a>
+	<div id = "Window">		
+		<a id="download-link" href="data:;base64," download="geojson.json"><button>Download Data</button></a>
+		<button onclick = "showButton();" class = "Default">Hide/Show</button> 
+		<button onclick = "DeleteEverythingMwromo();" class = "Default">Delete</button>
+		<textarea id="geojson-output" placeholder="See edits in GeoJson."></textarea>
+	</div>
   </body>
 </html>

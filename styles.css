@@ -16,10 +16,12 @@ body {
 /* Map styles. */
 #map-holder {
   height: 100%;
-  width: 100%;
+  width: 80%;
+  float:right;
 }
 
 #geojson-output {
+  position: relative;
   width: 100%;
   -webkit-box-sizing: border-box; /* <=iOS4, <= Android  2.3 */
   -moz-box-sizing: border-box; /* FF1+ */
@@ -30,8 +32,22 @@ body {
   display: none;
 }
 #download-link {
-  position: absolute;
-  top:10px;
-  right:10px;
+  position: relative;
+  /*top:10px;*/
+  /*right:10px;*/
   z-index:100;
+}
+
+#Window {
+  float: left;
+  width: 20%;
+  height: 100%;
+  background-color: 'white';
+}
+
+.Default {
+  position: relative;
+  /*top:10px;  */
+  /*right:300px;*/
+  z-index: 100; 
 }
