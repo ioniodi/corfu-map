@@ -1,6 +1,6 @@
 // The Google Map.
 var map;
-var value="nothing";
+var value="unknown";
 var geoJsonOutput;
 var downloadLink;
 
@@ -134,7 +134,7 @@ function rPath (event) {
         callback: function (result) {
             if (result != null) {
 
-                var rating = "nothing";
+                var rating = "unknown";
 
                 if (result == 1) {
                     rating = 1;
