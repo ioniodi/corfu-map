@@ -39,7 +39,7 @@ map.data.setStyle(function(feature) {
     });
   bindDataLayerListeners(map.data);
   //load rating
-  map.data.loadGeoJson("data/2016096_review.geojson");
+  map.data.loadGeoJson("data/2016201_review.geojson");
   map.data.addListener('mouseover',function (event){map.data.overrideStyle(event.feature,{strokeWeight:5});});
   map.data.addListener('mouseout',function (event){map.data.overrideStyle(event.feature,{strokeWeight:3});});
   //rate path with click
