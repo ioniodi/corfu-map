@@ -25,8 +25,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 5,
+        "Color": "green"
       }
     },
     {
@@ -49,8 +49,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 5,
+        "Color": "green"
       }
     },
     {
@@ -69,8 +69,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 5,
+        "Color": "green"
       }
     },
     {
@@ -93,8 +93,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 5,
+        "Color": "green"
       }
     },
     {
@@ -137,8 +137,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 5,
+        "Color": "green"
       }
     },
     {
@@ -169,8 +169,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 5,
+        "Color": "green"
       }
     },
     {
@@ -209,8 +209,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 5,
+        "Color": "green"
       }
     },
     {
@@ -241,8 +241,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 4,
+        "Color": "blue"
       }
     },
     {
@@ -261,8 +261,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 5,
+        "Color": "green"
       }
     },
     {
@@ -281,8 +281,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 5,
+        "Color": "green"
       }
     },
     {
@@ -317,8 +317,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 4,
+        "Color": "blue"
       }
     },
     {
@@ -341,8 +341,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 4,
+        "Color": "blue"
       }
     },
     {
@@ -361,8 +361,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 4,
+        "Color": "blue"
       }
     },
     {
@@ -389,8 +389,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 4,
+        "Color": "blue"
       }
     },
     {
@@ -445,8 +445,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 4,
+        "Color": "blue"
       }
     },
     {
@@ -465,8 +465,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 4,
+        "Color": "blue"
       }
     },
     {
@@ -485,8 +485,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 4,
+        "Color": "blue"
       }
     },
     {
@@ -545,8 +545,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 3,
+        "Color": "white"
       }
     },
     {
@@ -601,8 +601,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 3,
+        "Color": "white"
       }
     },
     {
@@ -621,8 +621,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 2,
+        "Color": "yellow"
       }
     },
     {
@@ -641,8 +641,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 2,
+        "Color": "yellow"
       }
     },
     {
@@ -661,8 +661,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 2,
+        "Color": "yellow"
       }
     },
     {
@@ -681,8 +681,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 2,
+        "Color": "yellow"
       }
     },
     {
@@ -701,8 +701,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 2,
+        "Color": "yellow"
       }
     },
     {
@@ -721,8 +721,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 2,
+        "Color": "yellow"
       }
     },
     {
@@ -741,8 +741,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 2,
+        "Color": "yellow"
       }
     },
     {
@@ -761,8 +761,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 2,
+        "Color": "yellow"
       }
     },
     {
@@ -781,8 +781,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 2,
+        "Color": "yellow"
       }
     },
     {
@@ -809,8 +809,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 2,
+        "Color": "yellow"
       }
     },
     {
@@ -829,8 +829,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 2,
+        "Color": "yellow"
       }
     },
     {
@@ -849,8 +849,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 2,
+        "Color": "yellow"
       }
     },
     {
@@ -869,8 +869,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 1,
+        "Color": "red"
       }
     },
     {
@@ -889,8 +889,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 1,
+        "Color": "red"
       }
     },
     {
@@ -957,8 +957,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 1,
+        "Color": "red"
       }
     },
     {
@@ -989,8 +989,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 1,
+        "Color": "red"
       }
     },
     {
@@ -1021,8 +1021,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 1,
+        "Color": "red"
       }
     },
     {
@@ -1045,8 +1045,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 2,
+        "Color": "yellow"
       }
     },
     {
@@ -1065,8 +1065,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 2,
+        "Color": "yellow"
       }
     },
     {
@@ -1085,8 +1085,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 2,
+        "Color": "yellow"
       }
     },
     {
@@ -1105,8 +1105,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 2,
+        "Color": "yellow"
       }
     },
     {
@@ -1125,8 +1125,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 4,
+        "Color": "blue"
       }
     },
     {
@@ -1145,8 +1145,8 @@
         ]
       },
       "properties": {
-        "Rating": "unknown",
-        "Color": "unknown"
+        "Rating": 4,
+        "Color": "blue"
       }
     },
     {
@@ -1164,7 +1164,10 @@
           ]
         ]
       },
-      "properties": {}
+      "properties": {
+        "Rating": 4,
+        "Color": "blue"
+      }
     }
   ]
 }
