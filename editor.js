@@ -25,10 +25,10 @@ function init() {
 map.data.setStyle(function(feature) {
 	var color = "#f5f5f5";
         if (feature.getProperty("Rating") == null && feature.getProperty("Color") == null ) {
-            feature.setProperty("Rating", value);
-            feature.setProperty("Color", value);
+            feature.setProperty("Rating", scale);
+            feature.setProperty("Color", scale);
         }
-        if (feature.getProperty("Color") != value) {
+        if (feature.getProperty("Color") != scale) {
             var color = feature.getProperty("Color");
         }
         return ({
@@ -39,13 +39,13 @@ map.data.setStyle(function(feature) {
     });
   bindDataLayerListeners(map.data);
   //load rating
-  map.data.loadGeoJson("data/2016201_review.geojson");
+  map.data.loadGeoJson("data/2016201.geojson");
   map.data.addListener('mouseover',function (event){map.data.overrideStyle(event.feature,{strokeWeight:5});});
   map.data.addListener('mouseout',function (event){map.data.overrideStyle(event.feature,{strokeWeight:3});});
   //rate path with click
-  map.data.addListener('click',function (event){ rPath(event)});
+  map.data.addListener('click',function (event){ scaleOfPath(event)});
   //delete path with right click
-  map.data.addListener('rightclick',function (event){dPath(event)});
+  map.data.addListener('rightclick',function (event){erasePath(event)});
   
   // Retrieve HTML elements.
   var mapContainer = document.getElementById('map-holder');
