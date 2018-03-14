@@ -111,23 +111,23 @@ function rPath (event) {
         backdrop: true,
         inputOptions: [
             {
-                text: "Very bad",
+                text: '1',
                 value: '1',
             },
             {
-                text: "Bad",
+                text: '2',
                 value: '2',
             },
             {
-                text: "Ok",
+                text: '3',
                 value: '3',
             },
             {
-                text: "Good",
+                text: '4',
                 value: '4',
             },
             {
-                text: "Very good",
+                text: '5',
                 value: '5',
             }
         ],
