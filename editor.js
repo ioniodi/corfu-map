@@ -1,6 +1,6 @@
 // The Google Map.
 var map;
-
+vaar x;
 var geoJsonOutput;
 var downloadLink;
 
@@ -96,4 +96,9 @@ function geojsonOutput() {
 function deletepaths(){
   map.data.forEach(function(e){map.data.remove(e);});
   geoJsonOutput.value=null;
+}
+function selected_color(event, x){
+    color = x;
+    map.data.overrideStyle(event.feature,{strokeColor: x});
+    event.feature.setProperty("Color", x);
 }
