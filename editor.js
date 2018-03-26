@@ -24,6 +24,10 @@ function init() {
 
   bindDataLayerListeners(map.data);
 
+  map.data.addListener('rightclick', function(event){
+        map.data.remove(event.feature);
+    	});
+
   // Retrieve HTML elements.
   var mapContainer = document.getElementById('map-holder');
   geoJsonOutput = document.getElementById('geojson-output');
