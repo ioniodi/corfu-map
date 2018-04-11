@@ -85,7 +85,6 @@ function bindDataLayerListeners(dataLayer) {
     });
 }
 	
-
 // Enable geojson output with the click of the button
 function geojsonOutput() {
     var show = document.getElementById("geojson-output");
