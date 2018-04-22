@@ -4,6 +4,8 @@ var map;
 var geoJsonOutput;
 var show_hide_json_btn;
 var downloadLink;
+var info_window;
+var active_feature;
 
 function init() {
   // Initialise the map.
@@ -86,5 +88,61 @@ function remove_active_feature() {
         map.data.remove(active_feature.feature);
         close_infowindow();
     }
+    refreshGeoJsonFromData();
+}
+function close_infowindow() {
+    if(info_window) {
+        info_window.close();
+    }
+    active_feature = null;
+}
+function add_rating() {
+    if(active_feature) {
+        var rating_value = document.getElementById('new_rating').value;
+        var ratings = active_feature.feature.getProperty("ratings");
+        if (!ratings) {
+            ratings = [];
+        }
+        ratings.push(rating_value);
+        active_feature.feature.setProperty("ratings", ratings);
+        active_feature.feature.setProperty("rating", Math.floor(get_avg(ratings)));
+    }
+    refresh_feature_style(active_feature.feature);
+    close_infowindow();
+    refreshGeoJsonFromData();
+}
+
+function get_avg(arr) {
+    if(arr && arr.length>0) {
+        var avg = 0;
+        arr.forEach(function (value) {
+            avg += parseInt(value);
+        });
+        return avg / arr.length;
+    }
+    return 0;
+}
+
+function show_hide_json() {
+    var status = geoJsonOutput.style.display==="block";
+    geoJsonOutput.style.display = !status?"block":"none";
+    show_hide_json_btn.innerText = status?"Show JSON":"Hide JSON";
+}
+
+// Refresh different components from other components.
+function refreshGeoJsonFromData() {
+    map.data.toGeoJson(function(geoJson) {
+        geoJsonOutput.value = JSON.stringify(geoJson);
+        refreshDownloadLinkFromGeoJson();
+    });
+}
+
+// Refresh download link.
+function refreshDownloadLinkFromGeoJson() {
+    downloadLink.href = "data:;base64," + btoa(geoJsonOutput.value);
+}
+
+function add_feature(feature) {
+    feature.feature.setProperty("rating", "unknown");
     refreshGeoJsonFromData();
 }
