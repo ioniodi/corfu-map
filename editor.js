@@ -2,6 +2,7 @@
 var map;
 
 var geoJsonOutput;
+var show_hide_json_btn;
 var downloadLink;
 
 function init() {
