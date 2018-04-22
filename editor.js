@@ -51,3 +51,15 @@ function bindDataLayerListeners(dataLayer) {
   dataLayer.addListener('removefeature', refreshGeoJsonFromData);
   dataLayer.addListener('setgeometry', refreshGeoJsonFromData);
 }
+function ToggleGeoJsonOutput(){
+  var output = document.getElementById("geojson-output");
+  if (output.style.display === "block"){
+    output.style.display = "none";
+  } else {
+    output.style.display = "block";
+  }
+}
+function deletepaths(){
+map.data.forEach(function(e){map.data.remove(e);});
+geoJsonOutput.value=null;
+}
