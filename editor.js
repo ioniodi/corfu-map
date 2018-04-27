@@ -24,6 +24,19 @@ function init() {
     draggable: true,
     clickable: true
   });
+	
+    map.data.loadGeoJson("data/2013109.geojson");
+
+    map.data.setStyle(function(feature) {
+        var avg = get_avg(feature.getProperty('ratings'));
+        var color = "hsl("+avg*24+",100%,50%)";
+        return {
+            fillColor: color,
+            strokeColor: color,
+            strokeWeight: 5
+        }
+    });
+
 
   bindDataLayerListeners(map.data);
 
@@ -33,33 +46,27 @@ function init() {
   show_hide_json_btn = document.getElementById('show_hide_geojson');
   downloadLink = document.getElementById('download-link');
 	
-  map.data.addListener('click', function(event) {
+   map.data.addListener('click', function(event) {
         active_feature = event;
         add_rating_popup(event);
+    });
+
+
+}
+
+function refresh_feature_style(feature) {
+    map.data.overrideStyle(feature, function() {
+        var avg = get_avg(feature.getProperty('ratings'));
+        var color = "hsl("+avg*24+",100%,50%)";
+        return {
+            fillColor: color,
+            strokeColor: color
+        }
     });
 }
 
 google.maps.event.addDomListener(window, 'load', init);
 
-// Refresh different components from other components.
-function refreshGeoJsonFromData() {
-  map.data.toGeoJson(function(geoJson) {
-    geoJsonOutput.value = JSON.stringify(geoJson);
-    refreshDownloadLinkFromGeoJson();
-  });
-}
-
-// Refresh download link.
-function refreshDownloadLinkFromGeoJson() {
-  downloadLink.href = "data:;base64," + btoa(geoJsonOutput.value);
-}
-
-// Apply listeners to refresh the GeoJson display on a given data layer.
-function bindDataLayerListeners(dataLayer) {
-  dataLayer.addListener('addfeature', refreshGeoJsonFromData);
-  dataLayer.addListener('removefeature', refreshGeoJsonFromData);
-  dataLayer.addListener('setgeometry', refreshGeoJsonFromData);
-}
 function add_rating_popup(data) {
     if(info_window) {
         info_window.close();
@@ -74,15 +81,15 @@ function add_rating_popup(data) {
         active_feature = null;
     });
 }
+
 function remove_all_features() {
-    var alert = confirm("Are you sure?");
-    if (alert == true) {
         map.data.forEach(function(feature) {
             map.data.remove(feature);
-        });
+	});
         refreshGeoJsonFromData();
     }
 }
+
 function remove_active_feature() {
     if(active_feature) {
         map.data.remove(active_feature.feature);
@@ -90,12 +97,14 @@ function remove_active_feature() {
     }
     refreshGeoJsonFromData();
 }
+
 function close_infowindow() {
     if(info_window) {
         info_window.close();
     }
     active_feature = null;
 }
+
 function add_rating() {
     if(active_feature) {
         var rating_value = document.getElementById('new_rating').value;
@@ -145,4 +154,10 @@ function refreshDownloadLinkFromGeoJson() {
 function add_feature(feature) {
     feature.feature.setProperty("rating", "unknown");
     refreshGeoJsonFromData();
+}
+// Apply listeners to refresh the GeoJson display on a given data layer.
+function bindDataLayerListeners(dataLayer) {
+    dataLayer.addListener('addfeature', add_feature);
+    dataLayer.addListener('removefeature', refreshGeoJsonFromData);
+    dataLayer.addListener('setgeometry', refreshGeoJsonFromData);
 }
