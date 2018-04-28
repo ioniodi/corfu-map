@@ -83,9 +83,11 @@ function add_rating_popup(data) {
 }
 
 function remove_all_features() {
+    var alert = confirm("Are you sure?");
+    if (alert == true) {
         map.data.forEach(function(feature) {
             map.data.remove(feature);
-	});
+        });
         refreshGeoJsonFromData();
     }
 }
