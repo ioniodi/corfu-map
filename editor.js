@@ -24,7 +24,7 @@ function init() {
     clickable: true
   });
 	
-    map.data.loadGeoJson("data/2013108.geojson");
+    map.data.loadGeoJson("data/2013108_review.geojson");
     map.data.setStyle(function(feature) {
        var avg = get_avg(feature.getProperty('ratings'));
        var color = "hsl("+avg*24+",100%,50%)";
