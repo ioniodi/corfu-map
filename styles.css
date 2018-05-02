@@ -35,3 +35,15 @@ body {
   right:10px;
   z-index:100;
 }
+#show_hide_geojson {
+  top:50px;
+}
+#remove_all_features{
+  top: 90px;
+  color:red;
+}
+.menu_btn{
+  position: absolute;
+  right:10px;
+  z-index:100;
+}
