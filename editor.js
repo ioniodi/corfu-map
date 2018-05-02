@@ -25,7 +25,7 @@ function init() {
     clickable: true
   });
 	
-    map.data.loadGeoJson("data/2016004.geojson");
+    map.data.loadGeoJson("data/2013080geojson.json");
 
     map.data.setStyle(function(feature) {
         var avg = get_avg(feature.getProperty('ratings'));
